@@ -1,0 +1,124 @@
+.divOne{
+width:100%;
+height:100%;
+display:flex;
+flex-direction:row;
+}
+.insideOne{
+    padding: 2vmax;
+    width:100%;
+    height: 50%;
+}
+.insideOne>span{
+    font-size: 2vmax;
+    color:darkorange;
+    font-family: "main";
+}
+.insideTwo>span{
+    font-size: 2vmax;
+    color:darkorange;
+    font-family: "main";
+
+}
+.insideOne>img{
+    width:100%;
+    height:100%;
+}
+.insideTwo{
+    padding: 2vmax;
+    width:60%;
+    height: 30%;
+}
+.insideTwo>img{
+    width:100%;
+    height:100%;
+}
+.besideo{
+    width:35%;
+    height:100%
+}
+.besidet{
+    width:65%;
+    height:100%;
+}
+
+.besidet>div{
+    width: 100%;
+    height:100%;
+    font-family: "thrid";
+    font-size: 1.3vmax;
+    color:var(--second-color);
+    display: flex;
+    flex-direction: row;
+}
+.spanOne{
+    width:30%;
+    display: inline-block;
+    padding: 0.5vmax 0;
+}
+.spanTwo{
+    padding: 0.5vmax 3vmax 0.5vmax 0;
+    display: inline-block;
+    width:70%;
+    color:steelblue;
+
+}
+.spanThree{
+ width:100%;
+}
+.besidet>div:first-of-type{
+    font-size: 3vmax;
+    width:100%;
+    height:10%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding: 1.5vmax 0;
+    margin-top: 1.5vmax;
+    color:darkslateblue;
+    font-weight: 800;
+}
+
+
+@media  screen and (max-width:768px){
+    .besidet>div{
+        font-size: 1.6vmax;
+        flex-direction: row;
+    }
+    .spanOne{
+        width:30%;
+        padding: 0.5vmax 0;
+    }
+    .spanTwo{
+        padding: 0.5vmax 3vmax 0.5vmax 0;
+        width:70%;    
+    }
+  
+    .besidet>div:first-of-type{
+        font-size: 3vmax;
+        padding: 1.5vmax 0;
+        margin-top: 1.5vmax;
+        font-weight: 800;
+    }
+}
+@media screen and (max-width: 1200px){
+        .besidet>div{
+        font-size: 1.6vmax;
+        flex-direction: row;
+    }
+    .spanOne{
+        width:30%;
+        padding: 0.5vmax 0;
+    }
+    .spanTwo{
+        padding: 0.5vmax 3vmax 0.5vmax 0;
+        width:70%;    
+    }
+  
+    .besidet>div:first-of-type{
+        font-size: 3vmax;
+        padding: 1.5vmax 0;
+        margin-top: 1.5vmax;
+        font-weight: 800;
+    }
+}

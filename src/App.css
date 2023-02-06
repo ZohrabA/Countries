@@ -1,0 +1,393 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    list-style-type: none;
+    list-style: none;
+    user-select: none;
+    text-decoration: none;
+}
+@font-face{
+    font-family: "main";
+    src:url(./fonts//JockeyOne-Regular.ttf)
+}
+@font-face{
+    font-family: "second";
+    src:url(./fonts/ConcertOne-Regular.ttf)
+}
+@font-face{
+    font-family: "thrid";
+    src:url(./fonts/RobotoCondensed-Regular.ttf)
+}
+:root{
+    --main-color:#0B0D13;
+    --second-color:#CE9913;
+    --thrid-color:#09D3AC;
+    --fourth-color:#20232A;
+    --fifth-color:whitesmoke;
+}
+#root{
+    max-width: 1350px !important;
+    max-height: 700px !important;
+    margin: auto;
+    position: relative;
+}
+body{
+    background-color:var(--fourth-color);
+}
+.App {
+    width:100%;
+    height: 100%;
+    display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.eachHead{
+  width:15%;
+  height:20vmax;
+  margin-top: 5vh;
+  cursor:pointer;
+  position: relative;
+  box-shadow: 0px 0px 1px 1px var(--main-color);
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+z-index: 5;
+background-color: var(--fourth-color);
+}
+
+.eachHead>a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+.eachHead:hover{
+    box-shadow: 0px 0px 4px 4px var(--main-color);
+}
+.coat{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position:absolute;
+ width: 100% !important;
+ height: 0% !important;
+ top: 0%;
+ left: 0;
+ background-color:var(--fourth-color);
+ transition: 0.4s;
+ margin: 0 !important;
+ padding: 0 !important;
+ z-index: -6;
+ opacity: 0;
+ box-shadow: 0px 0px 1px 1px var(--main-color);
+
+}
+.coat img{
+    width: 80% !important;
+    height: 80% !important;
+
+}
+.eachHead:hover .coat{
+    height: 70% !important;
+    top: -72%;
+opacity: 1;
+box-shadow: 0px 0px 4px 4px var(--main-color);
+
+}
+.eachHead>a>div:first-of-type{
+    width: 100%;
+    height: 40%;}
+    
+.eachHead>a>div>img{
+    width: 100%;
+    height:100%;
+ 
+}
+.eachHead>a>div:last-of-type{
+    color:var(--second-color);
+    font-family:"thrid";
+    font-size: 1.3vw;
+    padding: 6%;
+    height: 30%;
+
+}
+.eachHead>a>span{
+    display:inline-block;
+    width:100%;
+    color:whitesmoke;
+font-size: 0.9vw;
+font-family: "thrid";
+margin-top: 2%;
+}
+.eachHead>a>span>span{
+    padding: 6%;
+    color:var(--second-color);
+    font-size: 1.1vw;
+}
+
+.optDiv{
+    font-family: "thrid";
+color:var(--second-color);
+position: absolute;
+top:80px;
+right: 4%;
+max-width: 1200px ;
+}
+.optDiv>span{
+    margin: 0 10px;
+    font-size: 25px;
+    font-weight:600
+}
+
+.optDiv>select:first-of-type{
+           color: darkviolet;
+           border: 2px solid darkviolet ;
+
+        }
+        .optDiv>select:last-of-type{
+           color:darkturquoise;
+           border: 2px solid darkturquoise;
+}
+
+
+.optDiv>select{
+
+    font-size: 18px;
+    font-weight:400;
+    font-family: "thrid";
+    background-color: var(--fourth-color);
+    cursor: pointer;
+    outline: none;
+    padding: 5px ;
+    margin-right: 10px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.optDiv>select:first-of-type:focus{
+    box-shadow: 0 0 3px 1.5px darkviolet;
+}
+.optDiv>select:last-of-type:focus{
+    box-shadow: 0 0 3px 1.5px darkturquoise;
+}
+
+option{
+    color: yellowgreen;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+@media only screen  and (max-width: 1200px){
+    .optDiv{
+    position: absolute;
+    top:80px;
+    right: 4%;
+    max-width: 1200px ;
+    }
+    .optDiv>span{
+        margin: 0 10px;
+        font-size: 16px;
+        font-weight:600
+    }
+    
+    .optDiv>select{
+    
+        font-size: 12px;
+        font-weight:300;
+        font-family: "thrid";
+        background-color: var(--fourth-color);
+        cursor: pointer;
+        outline: none;
+        padding: 5px ;
+   
+    }
+ 
+
+}
+
+@media only screen and (max-width: 900px){
+    .optDiv{
+        top:180px ;
+        right:4%;
+        display: flex;
+        flex-direction:row;
+        max-width: 900px ;
+        }
+        .optDiv>span{
+            margin: 0 10px;
+            font-size: 25px;
+            font-weight:600
+        }
+        
+    
+        .optDiv>select{
+            display: inline-block;
+            font-size: 15px;
+            font-weight:300;
+            padding: 5px ;
+            margin: 0 7px 0 0;
+        }
+        .optDiv>select:first-of-type{
+         width: 100px;
+        }
+        .optDiv>select:last-of-type{
+         width: 80px;
+        }
+      
+    .eachHead{
+        width:18% ;
+        height:50vw;
+        box-shadow: 0px 0px 2px 2px var(--main-color);
+        margin-top: 5vh;
+}
+
+    .eachHead:hover{
+        box-shadow: 0px 0px 5px 5px var(--main-color);
+    }
+    .eachHead>a>div:first-of-type{
+        width: 100%;
+        height: 40%;
+    
+    }
+    .eachHead>a>div>img{
+        width: 100%;
+        height:100%;
+  
+}
+    .eachHead>a>div:last-of-type{
+        font-size: 3vw;
+        padding: 6%;
+        height: 23%;
+        margin-top: 2%;
+    }
+    .eachHead>a>span{
+    font-size: 1.9vw;
+    margin-top: 9%;
+    }
+    .eachHead>a>span>span{
+        padding: 6%;
+        font-size: 2.1vw;
+    }
+    
+
+}
+@media only screen and (max-width: 768px) {
+    .eachHead{
+        width:24%;
+        height:50vw;
+        box-shadow: 0px 0px 2px 2px var(--main-color);
+        margin-top: 5vh;
+}
+
+    .eachHead:hover{
+        box-shadow: 0px 0px 5px 5px var(--main-color);
+    }
+    .eachHead>a>div:first-of-type{
+        width: 100%;
+        height: 40%;
+    
+    }
+    .eachHead>a>div>img{
+        width: 100%;
+        height:100%;
+
+}
+    .eachHead>a>div:last-of-type{
+        font-size: 3vw;
+        padding: 6%;
+        height: 23%;
+        margin-top: 2%;
+    }
+    .eachHead>a>span{
+    font-size: 1.9vw;
+    margin-top: 9%;
+    }
+    .eachHead>a>span>span{
+        padding: 6%;
+        font-size: 2.1vw;
+    }
+    
+    .optDiv{
+        top:27% ;
+        left:auto ;
+    display: flex;
+    flex-direction:row;
+    width: auto ;
+    }
+    .optDiv>span{
+        margin: 0 4px 0 0 ;
+        font-size: 25px;
+        font-weight:600
+    }
+    
+
+    .optDiv>select{
+        font-size: 15px;
+        font-weight:300;
+        padding: 5px ;
+        margin: 0 7px 0 0;
+    }
+  
+    .optDiv>select:first-of-type{
+        width: auto ;
+       }
+       .optDiv>select:last-of-type{
+        width: auto ;
+       }
+
+}
+
+@media only screen and (max-width: 415px){
+    .optDiv{
+        top:25% ;
+        left:4% ;
+        display: flex;
+        flex-direction:row;
+        max-width: 360px ;
+        }
+        .eachHead{
+            width:28%;
+            height:50vw;
+            box-shadow: 0px 0px 2px 2px var(--main-color);
+            margin-top: 5vh;
+    }
+        .optDiv>span{
+            margin: 0 2px ;
+            font-size: 15px ;
+            font-weight:400 ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+    
+        .optDiv>select{
+            font-size: 10px ;
+            font-weight:200;
+            padding: 5px ;
+            margin: 0 0 0 7px;
+        }}
+
+
+
+
+
+/* @media screen and (max-width: 425px){
+
+}
+@media screen and (max-width: 320px){
+
+}  */
